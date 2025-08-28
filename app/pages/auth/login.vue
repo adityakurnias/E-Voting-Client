@@ -1,27 +1,38 @@
 <template>
   <div class="min-h-screen relative overflow-hidden">
     <div
-      class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900"></div>
+      class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
+      <img src="~/assets/images/Background.png" />
+    </div>
 
     <div class="relative z-10 flex justify-between items-start p-6 px-0">
       <div
-        class="flex space-x-4 rounded-r-full bg-gradient-to-r from-purple-primary to-purple-secondary">
-        <div
-          v-for="i in 4"
-          :key="`left-${i}`"
-          class="w-16 h-16 rounded-full flex items-center justify-center from-purple-secondary to-purple-primary">
-          <div class="w-8 h-8 bg-white/30 rounded-full"></div>
-        </div>
+        class="flex space-x-2 rounded-r-full p-2 bg-gradient-to-r from-purple-primary to-purple-secondary">
+        <img
+          src="~/assets/images/Orgs/PNB.png"
+          class="w-14 h-14 object-contain" />
+        <img
+          src="~/assets/images/Orgs/MPK.png"
+          class="w-14 h-14 object-contain" />
+        <img
+          src="~/assets/images/Orgs/OSIS.png"
+          class="w-14 h-14 object-contain" />
+        <img
+          src="~/assets/images/Orgs/KPU.png"
+          class="w-14 h-14 object-contain" />
       </div>
 
       <div
-        class="flex space-x-4 rounded-l-full bg-gradient-to-r from-purple-secondary to-purple-primary">
-        <div
-          v-for="i in 3"
-          :key="`right-${i}`"
-          class="w-16 h-16 rounded-full shadow-lg flex items-center justify-center">
-          <div class="w-8 h-8 bg-white/30 rounded-full"></div>
-        </div>
+        class="flex space-x-2 rounded-l-full p-2 bg-gradient-to-r from-purple-secondary to-purple-primary">
+        <img
+          src="~/assets/images/Divisi/MM.png"
+          class="w-14 h-14 object-contain" />
+        <img
+          src="~/assets/images/Divisi/RPL.png"
+          class="w-14 h-14 object-contain" />
+        <img
+          src="~/assets/images/Divisi/TKJ.png"
+          class="w-14 h-14 object-contain" />
       </div>
     </div>
 
@@ -32,9 +43,7 @@
           <h1
             class="flex items-end justify-center gap-2 text-4xl md:text-5xl text-shadow-lg">
             <span class="font-extrabold text-title-primary">PENUS </span>
-            <span class="text-white italic font-bold text-3xl md:text-4xl"
-              >E-voting</span
-            >
+            <span class="text-white italic font-bold">E-voting</span>
           </h1>
         </div>
       </div>
