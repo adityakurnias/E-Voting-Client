@@ -1,13 +1,85 @@
 <template>
-  <div>
-    
+  <div
+    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background.png')] bg-cover bg-no-repeat bg-fixed">
+    <main
+      class="container mx-auto px-4 relative z-10 max-w-4xl text-center text-white">
+      <section
+        class="hero min-h-screen flex flex-col items-center justify-center">
+        <div class="flex items-center justify-center mb-8 mt-8">
+          <div
+            class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
+            <img
+              src="~/assets/images/Orgs/PNB.png"
+              class="w-10 h-10 object-contain" />
+          </div>
+          <h1 class="text-2xl font-bold">SMK PLUS PELITA NUSANTARA</h1>
+        </div>
+        <div class="mb-12 flex flex-col items-">
+          <h2 class="text-8xl font-bold mb-2 text-shadow-lg">PENUS</h2>
+          <h2
+            class="text-8xl text-shadow-lg font-bold mb-4 px-3 rounded-sm bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E]">
+            E-VOTING
+          </h2>
+        </div>
+        <div class="mb-8">
+          <p class="text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+            Selamat datang ke dalam program
+            <span class="font-semibold">E-voting Penus</span>. Silahkan geser
+            kebawah untuk memilih kandidat MPK dan OSIS favorit anda atau klik
+            tombol yang ada dibawah.
+          </p>
+          <button
+            class="bg-gradient-to-r from-purple-secondary to-purple-primary cursor-pointer text-white font-semibold py-2 px-10 rounded-full transition-all hover:shadow-lg hover:scale-105 mb-12">
+            Saya Ingin Vote Sekarang
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="flex flex-col items-center justify-around mx-auto min-h-screen">
+        <div>
+          <h3 class="text-2xl font-bold mb-6">
+            Tentukan Pilihan-Mu Dengan Bijak dan Cerdas
+          </h3>
+          <blockquote class="italic text-lg mb-4 leading-relaxed">
+            "Setiap suara adalah kekuatan, sekecil apapun ia tetap memberi
+            dampak besar. Gunakan hak pilih Anda dengan penuh tanggung jawab,
+            karena dari pilihan itu akan lahir pemimpin yang akan membawa
+            perubahan bagi bangsa dan generasi mendatang."
+          </blockquote>
+          <p class="text-xl font-semibold">~ Nelsoun Mandela</p>
+        </div>
+      </section>
+
+      <section class="flex flex-col items-center justify-around mx-auto">
+        <h2 class="text-2xl font-bold mb-10">
+          Silahkan Klik Gambar Dibawah Ini Untuk Voting
+        </h2>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-2xl blur-sm opacity-75"></div>
+
+            <div
+              class="relative bg-mpk rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
+              <h2 class="text-4xl font-bold text-gray-800 mb-8">MPK</h2>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
+
+            <div
+              class="relative bg-osis rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
+              <h2 class="text-4xl font-bold text-gray-800 mb-8">OSIS</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
 </template>
 
-<script lang="ts" setup>
-
-</script>
-
-<style>
-
-</style>
+<script lang="ts" setup></script>

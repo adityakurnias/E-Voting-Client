@@ -36,10 +36,10 @@
       </div>
     </div>
 
-    <div class="relative z-10 flex flex-col items-center justify-center px-6">
+    <main class="relative z-10 flex flex-col items-center justify-center px-6">
       <div class="mb-12 text-center">
         <div
-          class="bg-gradient-to-tr from-brown-secondary to-brown-primary px-6 py-2 rounded-md shadow-2xl">
+          class="bg-gradient-to-tr from-brown-secondary to-brown-primary px-6 py-2 rounded-sm shadow-2xl">
           <h1
             class="flex items-end justify-center gap-2 text-4xl md:text-5xl text-shadow-lg">
             <span class="font-extrabold text-title-primary">PENUS </span>
@@ -92,7 +92,7 @@
           </div>
         </form>
       </div>
-    </div>
+    </main>
 
     <div class="relative z-10 text-center pb-8">
       <p class="text-white/60 text-sm tracking-wide">
