@@ -120,5 +120,15 @@ const formData = ref({
   nisNig: "",
 });
 
-const handleSubmit = async () => {};
+const handleSubmit = async () => {
+  try {
+    //! Gua belom tau url nya apa, nanti ubah pas dah di host
+    const data = await $fetch(`API/auth/login`, {
+      method: "POST",
+      body: formData.value,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 </script>
