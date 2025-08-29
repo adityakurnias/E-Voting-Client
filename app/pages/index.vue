@@ -51,13 +51,13 @@
         </div>
       </section>
 
-      <section class="flex flex-col items-center justify-around mx-auto">
+      <section class="flex flex-col items-center justify-around mx-auto mb-32">
         <h2 class="text-2xl font-bold mb-10">
           Silahkan Klik Gambar Dibawah Ini Untuk Voting
         </h2>
 
         <div class="flex flex-col md:flex-row gap-8">
-          <div class="relative">
+          <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
               class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-2xl blur-sm opacity-75"></div>
 
@@ -67,7 +67,7 @@
             </div>
           </div>
 
-          <div class="relative">
+          <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
               class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
 
