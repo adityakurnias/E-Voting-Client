@@ -4,12 +4,13 @@
     <main
       class="container mx-auto px-4 relative z-10 max-w-4xl text-center text-white">
       <section
+        id="cta"
         class="hero min-h-screen flex flex-col items-center justify-center">
         <div class="flex items-center justify-center mb-8 mt-8">
           <div
             class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
             <img
-              src="~/assets/images/Orgs/PNB.png"
+              src="~/assets/images/Orgs/PNBMINI.png"
               class="w-10 h-10 object-contain" />
           </div>
           <h1 class="text-2xl font-bold">SMK PLUS PELITA NUSANTARA</h1>
@@ -28,14 +29,16 @@
             kebawah untuk memilih kandidat MPK dan OSIS favorit anda atau klik
             tombol yang ada dibawah.
           </p>
-          <button
+          <a
+            href="#vote"
             class="bg-gradient-to-r from-purple-secondary to-purple-primary cursor-pointer text-white font-semibold py-2 px-10 rounded-full transition-all hover:shadow-lg hover:scale-105 mb-12">
             Saya Ingin Vote Sekarang
-          </button>
+          </a>
         </div>
       </section>
 
       <section
+        id="advice"
         class="flex flex-col items-center justify-around mx-auto min-h-screen">
         <div>
           <h3 class="text-2xl font-bold mb-6">
@@ -51,7 +54,9 @@
         </div>
       </section>
 
-      <section class="flex flex-col items-center justify-around mx-auto mb-32">
+      <section
+        id="vote"
+        class="flex flex-col items-center justify-around mx-auto mb-32">
         <h2 class="text-2xl font-bold mb-10">
           Silahkan Klik Gambar Dibawah Ini Untuk Voting
         </h2>
@@ -63,17 +68,22 @@
 
             <div
               class="relative bg-mpk rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <h2 class="text-4xl font-bold text-gray-800 mb-8">MPK</h2>
+              <div class="p-2">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
+                <img class="w-40" src="~/assets/images/Orgs/MPK.png" />
+              </div>
             </div>
           </div>
 
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
               class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
-
             <div
               class="relative bg-osis rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <h2 class="text-4xl font-bold text-gray-800 mb-8">OSIS</h2>
+              <div class="p-2">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
+                <img class="w-full" src="~/assets/images/Orgs/OSIS.png" />
+              </div>
             </div>
           </div>
         </div>
