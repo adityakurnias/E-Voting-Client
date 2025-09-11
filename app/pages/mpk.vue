@@ -9,27 +9,19 @@
           <h2 class="text-2xl font-bold mb-10">
             Silahkan Klik Gambar Dibawah Ini Untuk Voting
           </h2>
-          <div class="flex gap-8">
-            <div class="flex flex-col items-center justify-center gap-5">
-              <div class="hover:scale-105 transition-all cursor-pointer">
-                <img class="w-72" src="~/assets/images/Paslon/Paslon 1.svg" />
-              </div>
-              <Banner
-                calon1="Stevano Imanuel Pratama "
-                calon2="Mazaya Ilmina Syareefa "
-                kelas1="XI TKJ 3"
-                kelas2="XI DKV 1" />
-            </div>
-            <div class="flex flex-col items-center justify-center gap-5">
-              <div class="hover:scale-105 transition-all cursor-pointer">
-                <img class="w-72" src="~/assets/images/Paslon/Paslon 1.svg" />
-              </div>
-              <Banner
-                calon1="Diyas Aqilaalya "
-                calon2="Satria Robby Al Zidane "
-                kelas1="XI RPL 2"
-                kelas2="XI DKV 3" />
-            </div>
+          <div class="flex flex-wrap justify-center gap-8">
+            <CandidateCard
+              image-src="/images/Paslon/Paslon 1.svg"
+              calon1="Stevano Imanuel Pratama"
+              calon2="Mazaya Ilmina Syareefa"
+              kelas1="XI TKJ 3"
+              kelas2="XI DKV 1" />
+            <CandidateCard
+              image-src="/images/Paslon/Paslon 2.svg"
+              calon1="Diyas Aqilaalya"
+              calon2="Satria Robby Al Zidane"
+              kelas1="XI RPL 2"
+              kelas2="XI DKV 3" />
           </div>
         </div>
       </section>
@@ -37,6 +29,7 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+</script>
 
 <style></style>

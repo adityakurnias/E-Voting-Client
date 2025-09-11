@@ -10,29 +10,29 @@
         class="flex space-x-2 rounded-r-full p-2 bg-gradient-to-r from-purple-primary to-purple-secondary">
         <img
           src="~/assets/images/Orgs/PNB.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
         <img
           src="~/assets/images/Orgs/MPK.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
         <img
           src="~/assets/images/Orgs/OSIS.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
         <img
           src="~/assets/images/Orgs/KPU.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
       </div>
 
       <div
         class="flex space-x-2 rounded-l-full p-2 bg-gradient-to-r from-purple-secondary to-purple-primary">
         <img
           src="~/assets/images/Divisi/MM.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
         <img
           src="~/assets/images/Divisi/RPL.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
         <img
           src="~/assets/images/Divisi/TKJ.png"
-          class="w-14 h-14 object-contain" />
+          class="w-12 h-12 object-contain" />
       </div>
     </div>
 

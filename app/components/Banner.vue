@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="bg-gradient-to-r from-[#D9D9D9] to-[#737373] px-6 py-2 transform -skew-x-12 shadow-lg">
+    <div class="bg-gradient-to-rd from-[#D9D9D9] to-[#737373] px-6 py-2 transform -skew-x-12 shadow-lg">
       <div class="transform skew-x-12">
         <h2 class="text-title-primary text-md font-bold">
           {{ props.calon1 }} 
