@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background.png')] bg-cover bg-no-repeat bg-fixed">
+    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed">
     <main
       class="container mx-auto px-4 relative z-10 max-w-4xl text-center text-white">
       <section

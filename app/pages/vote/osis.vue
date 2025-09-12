@@ -1,8 +1,10 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background.png')] bg-cover bg-no-repeat bg-fixed">
+    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/OSIS.png')] bg-cover bg-no-repeat">
+    <div
+      class="absolute z-10 inset-0 bg-[url('~/assets/images/Background/ELEMEN%20EMAS.png')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
     <main
-      class="min-h-screen container mx-auto px-4 relative z-10 text-center text-white">
+      class="min-h-screen z-20 container mx-auto px-4 relative text-center text-white">
       <section
         class="flex flex-col items-center justify-around mx-auto min-h-screen">
         <div class="flex flex-col">
