@@ -2,7 +2,7 @@
   <div class="min-h-screen relative overflow-hidden">
     <div
       class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
-      <img src="~/assets/images/Background.png" />
+      <img src="~/assets/images/Background/KPOP.png" />
     </div>
 
     <div class="relative z-10 flex justify-between items-start p-6 px-0">
