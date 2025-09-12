@@ -11,19 +11,19 @@
             class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
             <img
               src="~/assets/images/Orgs/PNBMINI.png"
-              class="w-10 h-10 object-contain" />
+              class="w-8 h-8 md:w-10 md:h-10 object-contain" />
           </div>
-          <h1 class="text-2xl font-bold">SMK PLUS PELITA NUSANTARA</h1>
+          <h1 class="text-md md:text-2xl font-bold">SMK PLUS PELITA NUSANTARA</h1>
         </div>
         <div class="mb-12 flex flex-col items-">
-          <h2 class="text-8xl font-bold mb-2 text-shadow-lg">PENUS</h2>
+          <h2 class="text-5xl md:text-8xl font-bold mb-2 text-shadow-lg">PENUS</h2>
           <h2
-            class="text-8xl text-shadow-lg font-bold mb-4 px-3 rounded-sm bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E]">
+            class="text-5xl md:text-8xl text-shadow-lg font-bold mb-4 px-3 rounded-sm bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E]">
             E-VOTING
           </h2>
         </div>
         <div class="mb-8">
-          <p class="text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+          <p class="text-md md:text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
             Selamat datang ke dalam program
             <span class="font-semibold">E-voting Penus</span>. Silahkan geser
             kebawah untuk memilih kandidat MPK dan OSIS favorit anda atau klik
@@ -44,13 +44,13 @@
           <h3 class="text-2xl font-bold mb-6">
             Tentukan Pilihan-Mu Dengan Bijak dan Cerdas
           </h3>
-          <blockquote class="italic text-lg mb-4 leading-relaxed">
+          <blockquote class="italic text-md md:text-lg mb-4 leading-relaxed">
             "Setiap suara adalah kekuatan, sekecil apapun ia tetap memberi
             dampak besar. Gunakan hak pilih Anda dengan penuh tanggung jawab,
             karena dari pilihan itu akan lahir pemimpin yang akan membawa
             perubahan bagi bangsa dan generasi mendatang."
           </blockquote>
-          <p class="text-xl font-semibold">~ Nelsoun Mandela</p>
+          <p class="text-md md:text-xl font-semibold">~ Nelsoun Mandela</p>
         </div>
       </section>
 
@@ -68,10 +68,10 @@
 
             <div
               class="relative bg-mpk rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <div class="p-2">
+              <a href="/vote/mpk" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
                 <img class="w-40" src="~/assets/images/Orgs/MPK.png" />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -80,10 +80,10 @@
               class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
             <div
               class="relative bg-osis rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <div class="p-2">
+              <a href="/vote/osis" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
                 <img class="w-full" src="~/assets/images/Orgs/OSIS.png" />
-              </div>
+              </a>
             </div>
           </div>
         </div>
