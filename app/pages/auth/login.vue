@@ -9,16 +9,16 @@
       <div
         class="flex space-x-2 rounded-r-full p-2 bg-gradient-to-r from-purple-primary to-purple-secondary">
         <img
-          src="~/assets/images/Orgs/PNB.png"
+          src="~/assets/images/Orgs/PNBMINI.png"
           class="w-12 h-12 object-contain" />
         <img
-          src="~/assets/images/Orgs/MPK.png"
+          src="~/assets/images/Orgs/MPKMINI.png"
           class="w-12 h-12 object-contain" />
         <img
-          src="~/assets/images/Orgs/OSIS.png"
+          src="~/assets/images/Orgs/OSISMINI.png"
           class="w-12 h-12 object-contain" />
         <img
-          src="~/assets/images/Orgs/KPU.png"
+          src="~/assets/images/Orgs/KPUMINI.png"
           class="w-12 h-12 object-contain" />
       </div>
 
