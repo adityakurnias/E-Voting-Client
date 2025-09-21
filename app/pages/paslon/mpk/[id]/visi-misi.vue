@@ -22,7 +22,7 @@
             <p>{{ candidate.vision }}</p>
           </div>
 
-          <div class="row-span-3 rounded-xl p-4 overflow-y-auto">
+          <div class="row-span-3 rounded-xl p-4 overflow-y-auto border border-purple-primary">
             <h3
               class="w-fit px-4 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
               Program Kerja

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="bg-[#2a3944] min-h-screen">
     <div v-if="loading" class="loading-page">
       <div class="loading-spinner"></div>
       <p class="text-white">Memuat Halaman...</p>
     </div>
-    <NuxtLayout v-show="loading">
+    <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
   </div>
@@ -14,9 +14,9 @@
 const loading = ref(true);
 
 onMounted(() => {
-  window.addEventListener("load", () => {
+  setTimeout(() => {
     loading.value = false;
-  });
+  }, 500);
 });
 </script>
 
