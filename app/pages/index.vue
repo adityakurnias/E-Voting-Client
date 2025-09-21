@@ -10,13 +10,18 @@
           <div
             class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
             <img
+              loading="lazy"
               src="~/assets/images/Orgs/PNBMINI.png"
               class="w-8 h-8 md:w-10 md:h-10 object-contain" />
           </div>
-          <h1 class="text-md md:text-2xl font-bold">SMK PLUS PELITA NUSANTARA</h1>
+          <h1 class="text-md md:text-2xl font-bold">
+            SMK PLUS PELITA NUSANTARA
+          </h1>
         </div>
         <div class="mb-12 flex flex-col items-">
-          <h2 class="text-5xl md:text-8xl font-bold mb-2 text-shadow-lg">PENUS</h2>
+          <h2 class="text-5xl md:text-8xl font-bold mb-2 text-shadow-lg">
+            PENUS
+          </h2>
           <h2
             class="text-5xl md:text-8xl text-shadow-lg font-bold mb-4 px-3 rounded-sm bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E]">
             E-VOTING
@@ -68,9 +73,12 @@
 
             <div
               class="relative bg-mpk rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <a href="/vote/mpk" class="p-2">
+              <a href="/paslon/mpk" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
-                <img class="w-40" src="~/assets/images/Orgs/MPK.png" />
+                <img
+                  loading="lazy"
+                  class="w-40"
+                  src="~/assets/images/Orgs/MPK.png" />
               </a>
             </div>
           </div>
@@ -80,9 +88,12 @@
               class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
             <div
               class="relative bg-osis rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <a href="/vote/osis" class="p-2">
+              <a href="/paslon/osis" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
-                <img class="w-full" src="~/assets/images/Orgs/OSIS.png" />
+                <img
+                  loading="lazy"
+                  class="w-full"
+                  src="~/assets/images/Orgs/OSIS.png" />
               </a>
             </div>
           </div>

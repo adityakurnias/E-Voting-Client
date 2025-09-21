@@ -1,0 +1,98 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "name": "Arya Fata Rasikhuna",
+      "partner": "Bunga Cantika Safitrie",
+      "number": "01",
+      "image": "/images/Paslon/OSIS/VISIMISI/Paslon 1.svg",
+      "vision": "Menjadikan OSIS SMK Plus Pelita Nusantara sebagai wadah yang inklusif, inspiratif, dan inovatif dengan mengakomodasi aspirasi, membentuk karakter kepemimpinan, serta mewujudkan lingkungan sekolah yang progresif.",
+      "missions": [
+        "Mendukung penuh setiap kegiatan positif yang dilakukan warga SMK Plus Pelita Nusantara.",
+        "Menjadi penghubung yang baik antara siswa, guru, dan sekolah agar aspirasi siswa/i bisa didengar dan ditindaklanjuti dengan bijak.",
+        "Mewujudkan OSIS yang transparan dan akuntabel dengan melibatkan siswa/i dalam pengambilan keputusan penting.",
+        "Menumbuhkan jiwa kepemimpinan, etika, dan karakter seluruh siswa/i yang tangguh untuk menghadapi tantangan masa depan.",
+        "Meningkatkan kerja sama antar siswa melalui kegiatan yang memperkuat rasa persatuan dan kebersamaan."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Mengadakan Konferensi Sekolah.",
+          "Mengadakan Latihan Dasar Kepemimpinan Siswa (LDKS).",
+          "Mengadakan turnamen E-sports.",
+          "Mengadakan Pentas Seni.",
+          "Mengadakan English Challenge Day.",
+          "Mengadakan Re-Create Challenge."
+        ],
+        "longTerm": [
+          "Memperingati Hari Besar Nasional dan Keagamaan.",
+          "Menyelenggarakan Classmeeting setiap satu tahun sekali.",
+          "Membantu menyukseskan upacara bendera di setiap hari Senin.",
+          "Melaksanakan pengecekan kelengkapan atribut dan pemakaian helm setiap pagi hari di depan lorong bersama tim guru Bimbingan Konseling.",
+          "Berpartisipasi aktif dalam pelaksanaan program kerja sekolah yang sedang berlangsung."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Aditya Putra Sujana",
+      "partner": "Meidina Aulia Rahma",
+      "number": "02",
+      "image": "/images/Paslon/OSIS/VISIMISI/Paslon 2.svg",
+      "vision": "Menjadikan OSIS sebagai wadah untuk membangun nilai-nilai religius, kreatif, inspiratif, entrepreneurship dan menjadi penggerak perubahan.",
+      "missions": [
+        "Menjadikan OSIS SMK Plus Pelita Nusantara yang memiliki sifat toleransi yang tinggi dan meningkatkan ketakwaan kepada Tuhan Yang Maha Esa.",
+        "Meningkatkan prestasi siswa/i SMK Plus Pelita Nusantara yang bersifat akademik/non akademik melalui berbagai kegiatan dan program yang mendukung.",
+        "Meningkatkan kreativitas dan inovasi siswa/i melalui berbagai kegiatan seni, budaya maupun olahraga.",
+        "Mengembangkan soft skills siswa/i dengan kegiatan yang membangun jiwa kepemimpinan.",
+        "Menjalin kerja sama dengan pihak dalam dan luar sekolah untuk meningkatkan kualitas dan kapabilitas OSIS. Serta mendukung pengembangan potensi siswa."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Mengadakan kegiatan MONA (Melody of Nasionalism).",
+          "Mengadakan kegiatan PEF (Penus E-Sports Festival).",
+          "Mengadakan kegiatan SAYPAF (Sport and Art Penus Festival).",
+          "Mengadakan kegiatan POSIS (Podcast with OSIS) yang mendukung public speaking dengan dua bahasa.",
+          "Melaksanakan kegiatan UPCYCLE FEST secara berkala setiap tiga bulan sekali, dengan sistem giliran antar angkatan."
+        ],
+        "longTerm": [
+          "Memperingati dan menyukseskan acara Hari Besar Nasional dan Keagamaan.",
+          "Mengadakan Class Meeting setiap akhir tahun.",
+          "Membantu Tim Kesiswaan dan Bimbingan Konseling untuk menertibkan siswa/i dengan berjaga di lorong dan koridor sekolah.",
+          "Membantu menyukseskan upacara setiap hari Senin."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Al Fath Rizky Sudjana",
+      "partner": "Rindra Arsyia Az-zahra",
+      "number": "03",
+      "image": "/images/Paslon/OSIS/VISIMISI/Paslon 3.svg",
+      "vision": "Menjadikan OSIS sebagai wadah pengembangan Siswa/i, untuk menjadi pribadi yang religius, berakhlak, berkarakter, dan berjiwa kepemimpinan yang mampu berkontribusi nyata dalam membangun lingkungan sekolah yang aktif, peduli, dan kompetitif.",
+      "missions": [
+        "Menjadikan Siswa/i SMK Plus Pelita Nusantara berjiwa religius dan memiliki jiwa sosial yang tinggi.",
+        "Mendisiplinkan Siswa/i SMK Plus Pelita Nusantara menjadi pribadi yang bertanggung jawab pada diri sendiri maupun orang lain.",
+        "Mengembangkan potensi Siswa/i di bidang akademik maupun non-akademik melalui berbagai kegiatan positif.",
+        "Mengoptimalkan peran media sosial untuk menunjang seluruh kegiatan organisasi dengan penuh tanggung jawab.",
+        "Menjalin hubungan yang harmonis dengan semua pihak yang terlibat dalam seluruh kegiatan OSIS.",
+        "Memberi ruang untuk peserta didik agar dapat menyampaikan pendapat maupun saran yang diperlukan guna terlaksananya suatu kegiatan."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Melakukan ajang pencarian bakat untuk Siswa/i SMK Plus Pelita Nusantara.",
+          "Melakukan Latihan baris-berbaris untuk seluruh pengurus MPK/OSIS setiap 2 minggu sekali.",
+          "Mengadakan Turnamen E-Sports.",
+          "Mengadakan Pentas Seni (PENSI) sebagai wadah kreativitas Siswa/i.",
+          "Mengadakan English Podcast (EPO).",
+          "Mengadakan kegiatan Warung Jujur (WAJUR) untuk setiap kelas."
+        ],
+        "longTerm": [
+          "Menyukseskan Upacara Bendera setiap hari Senin.",
+          "Pengecekan kelengkapan seragam Siswa/i SMK Plus Pelita Nusantara setiap pagi.",
+          "Melaksanakan rapat evaluasi bersama pembina MPK/OSIS setiap satu bulan sekali.",
+          "Melaksanakan Forum Suara Siswa di sosial media."
+        ]
+      }
+    }
+  ]
+}

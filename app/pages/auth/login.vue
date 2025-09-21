@@ -2,22 +2,26 @@
   <div class="min-h-screen relative overflow-hidden">
     <div
       class="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
-      <img src="~/assets/images/Background/KPOP.png" />
+      <img loading="lazy" src="~/assets/images/Background/KPOP.png" />
     </div>
 
     <div class="relative z-10 flex justify-between items-start p-6 px-0">
       <div
         class="flex space-x-2 rounded-r-full p-2 bg-gradient-to-r from-purple-primary to-purple-secondary">
         <img
+          loading="lazy"
           src="~/assets/images/Orgs/PNBMINI.png"
           class="w-12 h-12 object-contain" />
         <img
+          loading="lazy"
           src="~/assets/images/Orgs/MPKMINI.png"
           class="w-12 h-12 object-contain" />
         <img
+          loading="lazy"
           src="~/assets/images/Orgs/OSISMINI.png"
           class="w-12 h-12 object-contain" />
         <img
+          loading="lazy"
           src="~/assets/images/Orgs/KPUMINI.png"
           class="w-12 h-12 object-contain" />
       </div>
@@ -25,12 +29,15 @@
       <div
         class="flex space-x-2 rounded-l-full p-2 bg-gradient-to-r from-purple-secondary to-purple-primary">
         <img
+          loading="lazy"
           src="~/assets/images/Divisi/MM.png"
           class="w-12 h-12 object-contain" />
         <img
+          loading="lazy"
           src="~/assets/images/Divisi/RPL.png"
           class="w-12 h-12 object-contain" />
         <img
+          loading="lazy"
           src="~/assets/images/Divisi/TKJ.png"
           class="w-12 h-12 object-contain" />
       </div>

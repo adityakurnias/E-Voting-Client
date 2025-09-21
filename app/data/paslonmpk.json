@@ -1,0 +1,63 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "name": "Stevano Imanuel Pratama",
+      "partner": "Mazaya Ilmina Syareefa",
+      "number": "01",
+      "image": "/images/Paslon/MPK/VISIMISI/Paslon 1.svg",
+      "vision": "Mengoptimalkan fungsi MPK SMK Plus Pelita Nusantara sebagai wadah aspirasi siswa/i berlandaskan etika dalam pengembangan diri, potensi, pengetahuan, dan kreativitas.",
+      "missions": [
+        "Berperan aktif mengawasi MPK/OSIS dengan rutin evaluasi kinerja.",
+        "Menerapkan sikap 3s (senyum, salam, dan sapa) di lingkungan sekolah.",
+        "Mengaktifkan kotak aspirasi untuk menampung kritik dan saran sebagai bentuk aspirasi siswa/i.",
+        "Berperan aktif dalam pelaksanaan kegiatan sekolah untuk mendukung ketertiban dan tujuan sekolah.",
+        "Menciptakan integritas dan transparansi terhadap anggota MPK/OSIS."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Menampung aspirasi siswa/i melalui google form dan kotak aspirasi.",
+          "Mengadakan rapat koordinator pengurus MPK bersama Dewan Penasihat Organisasi (DPO) setiap 3 bulan sekali.",
+          "Mengadakan rapat evaluasi OSIS yang bersifat insidental.",
+          "Mengadakan rapat untuk ketua/perwakilan Talent Day dan Ekstrakurikuler 2 bulan sekali.",
+          "Melaksanakan program pengembangan potensi siswa/i melalui kegiatan 'Speak Up with Confidence'."
+        ],
+        "longTerm": [
+          "Mengadakan Musyawarah Kerja (MUKER).",
+          "Mengadakan Musyawarah Besar (MUBES).",
+          "Mengadakan Laporan Penanggung Jawaban (LPJ).",
+          "Mengadakan Komisi Pemilihan Organisasi Pelajar (KPOP)."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Diyas Aqilalya",
+      "partner": "Satria Robby Al Zidane",
+      "number": "02",
+      "image": "/images/Paslon/MPK/VISIMISI/Paslon 2.svg",
+      "vision": "Mengoptimalkan peran Majelis Permusyawaratan Kelas menjadi wadah perwakilan siswa yang aspiratif dan bertanggung jawab, untuk menciptakan lingkungan sekolah yang aktif, harmonis, dan berintegritas.",
+      "missions": [
+        "Menampung dan menyampaikan aspirasi siswa secara transparan dan bertanggung jawab kepada pihak sekolah dan OSIS.",
+        "Mengawasi dan mengevaluasi kinerja OSIS agar berjalan sesuai dengan program kerja yang telah disepakati bersama.",
+        "Menjalin komunikasi yang efektif dan harmonis antara siswa, OSIS, dan pihak sekolah.",
+        "Memberikan kesempatan kepada siswa untuk menyampaikan ide atau pendapat agar bisa terus mengembangkan minat dan bakat mereka."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Menyediakan sarana bagi siswa/i untuk menyampaikan aspirasi secara online (melalui Google Form) maupun offline dengan cara berkeliling ke setiap kelas setiap 3 bulan sekali.",
+          "MPK ikut hadir dan mengevaluasi kegiatan OSIS dalam membuat laporan penanggung jawaban.",
+          "MPK membuka ruang diskusi bagi siswa/i yang merupakan koordinator ekstrakurikuler untuk menyampaikan aspirasi sesuai minat dan bakat mereka.",
+          "Program mingguan di media sosial sekolah atau papan informasi, menampilkan poster promosi berbayar untuk kegiatan preneurs, dan perkembangan program MPK/OSIS.",
+          "Mengadakan English Wednesday yang dilaksanakan setiap hari Rabu menggunakan Bahasa Inggris sehari-hari untuk meningkatkan kemampuan speaking dalam berbahasa Inggris."
+        ],
+        "longTerm": [
+          "Mengadakan Musyawarah Kerja (MUKER).",
+          "Mengadakan Musyawarah Besar (MUBES).",
+          "Mengadakan Laporan Penanggung Jawaban (LPJ).",
+          "Mengadakan Komisi Pemilihan Organisasi Pelajar (KPOP)."
+        ]
+      }
+    }
+  ]
+}
