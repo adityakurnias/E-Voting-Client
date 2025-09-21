@@ -22,31 +22,32 @@
             <p>{{ candidate.vision }}</p>
           </div>
 
-          <div class="row-span-3 rounded-xl p-4 overflow-y-auto border border-purple-primary">
+          <div class="row-span-3 relative p-4 overflow-visible border-2 border-purple-primary">
             <h3
-              class="w-fit px-4 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
+              class="absolute z-50 -top-4 w-fit px-4 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
               Program Kerja
             </h3>
 
-            <h4 class="font-semibold mt-2">Jangka Pendek</h4>
-            <ol class="list-decimal list-inside space-y-1">
-              <li
-                class="pl-4 -indent-4"
-                v-for="(program, i) in candidate.workPrograms.shortTerm"
-                :key="`sp-${i}`">
-                {{ program }}
-              </li>
-            </ol>
-
-            <h4 class="font-semibold mt-4">Jangka Panjang</h4>
-            <ol class="list-decimal list-inside space-y-1">
-              <li
-                class="pl-4 -indent-4"
-                v-for="(program, i) in candidate.workPrograms.longTerm"
-                :key="`lp-${i}`">
-                {{ program }}
-              </li>
-            </ol>
+            <div class="overflow-y-auto">
+              <h4 class="font-semibold mt-2">Jangka Pendek</h4>
+              <ol class="list-decimal list-inside space-y-1">
+                <li
+                  class="pl-4 -indent-4"
+                  v-for="(program, i) in candidate.workPrograms.shortTerm"
+                  :key="`sp-${i}`">
+                  {{ program }}
+                </li>
+              </ol>
+              <h4 class="font-semibold mt-4">Jangka Panjang</h4>
+              <ol class="list-decimal list-inside space-y-1">
+                <li
+                  class="pl-4 -indent-4"
+                  v-for="(program, i) in candidate.workPrograms.longTerm"
+                  :key="`lp-${i}`">
+                  {{ program }}
+                </li>
+              </ol>
+            </div>
           </div>
 
           <div class="row-span-2 rounded-xl p-4 overflow-y-auto">
