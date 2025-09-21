@@ -12,18 +12,22 @@
             Silahkan Klik Gambar Dibawah Ini Untuk Voting
           </h2>
           <div class="flex flex-wrap justify-center gap-8">
-            <CandidateCard
-              image-src="/images/Paslon/MPK/Paslon 1.svg"
-              calon1="Stevano Imanuel Pratama"
-              calon2="Mazaya Ilmina Syareefa"
-              kelas1="XI TKJ 3"
-              kelas2="XI DKV 1" />
-            <CandidateCard
-              image-src="/images/Paslon/MPK/Paslon 2.svg"
-              calon1="Diyas Aqilaalya"
-              calon2="Satria Robby Al Zidane"
-              kelas1="XI RPL 2"
-              kelas2="XI DKV 3" />
+            <a href="/paslon/mpk/1/visi-misi">
+              <CandidateCard
+                image-src="/images/Paslon/MPK/Paslon 1.svg"
+                calon1="Stevano Imanuel Pratama"
+                calon2="Mazaya Ilmina Syareefa"
+                kelas1="XI TKJ 3"
+                kelas2="XI DKV 1" />
+            </a>
+            <a href="/paslon/mpk/2/visi-misi">
+              <CandidateCard
+                image-src="/images/Paslon/MPK/Paslon 2.svg"
+                calon1="Diyas Aqilaalya"
+                calon2="Satria Robby Al Zidane"
+                kelas1="XI RPL 2"
+                kelas2="XI DKV 3" />
+            </a>
           </div>
         </div>
       </section>

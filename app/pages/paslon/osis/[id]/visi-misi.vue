@@ -70,7 +70,7 @@ const backgroundStyle = computed(() => {
   const id = parseInt(paslon);
   if ([1, 2, 3].includes(id)) {
     return {
-      backgroundImage: `url('/images/Background/VISIMISI/Paslon-${id}.png')`,
+      backgroundImage: `url('/images/Background/VISIMISI/OSIS/Paslon-${id}.png')`,
     };
   }
   return {};

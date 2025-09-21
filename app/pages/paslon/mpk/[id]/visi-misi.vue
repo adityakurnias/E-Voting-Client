@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import paslonData from "~/data/paslonosis.json";
+import paslonData from "~/data/paslonmpk.json";
 
 const route = useRoute();
 const paslon = route.params.id;
@@ -68,9 +68,9 @@ const candidate = computed(() => {
 
 const backgroundStyle = computed(() => {
   const id = parseInt(paslon);
-  if ([1, 2, 3].includes(id)) {
+  if ([1, 2].includes(id)) {
     return {
-      backgroundImage: `url('/images/Background/VISIMISI/Paslon-${id}.png')`,
+      backgroundImage: `url('/images/Background/VISIMISI/MPK/Paslon-${id}.png')`,
     };
   }
   return {};
