@@ -1,0 +1,100 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "name": "Arya Fata Rasikhuna",
+      "partner": "Bunga Cantika Safitrie",
+      "number": "01",
+      "image": "/images/paslon-1.jpg",
+      "vision": "Menjadikan OSIS SMK Plus Pelita Nusantara sebagai wadah yang inklusif, inspiratif, dan inovatif dengan mengakomodasi aspirasi, membentuk karakter kepemimpinan, serta mewujudkan lingkungan sekolah yang progresif.",
+      "missions": [
+        "Mendukung penuh setiap kegiatan positif yang dilakukan warga SMK Plus Pelita Nusantara.",
+        "Menjadi penghubung yang baik antara siswa, guru, dan sekolah agar aspirasi siswa/i bisa didengar dan ditindaklanjuti dengan bijak.",
+        "Mewujudkan OSIS yang transparan dan akuntabel dengan melibatkan siswa/i dalam pengambilan keputusan penting.",
+        "Menumbuhkan jiwa kepemimpinan, etika, dan karakter seluruh siswa/i yang tangguh untuk menghadapi tantangan masa depan.",
+        "Meningkatkan kerja sama antar siswa melalui kegiatan yang memperkuat rasa persatuan dan kebersamaan."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Mengadakan Konferensi Sekolah.",
+          "Mengadakan Latihan Dasar Kepemimpinan Siswa (LDKS).",
+          "Mengadakan turnamen E-sports.",
+          "Mengadakan Pentas Seni.",
+          "Mengadakan English Challenge Day.",
+          "Mengadakan Re-Create Challenge."
+        ],
+        "longTerm": [
+          "Memperingati Hari Besar Nasional dan Keagamaan.",
+          "Menyelenggarakan Classmeeting setiap satu tahun sekali.",
+          "Membantu menyukseskan upacara bendera di setiap hari Senin.",
+          "Melaksanakan pengecekan kelengkapan atribut dan pemakaian helm setiap pagi hari di depan lorong bersama tim guru BK/Bimbingan Konseling.",
+          "Berpartisipasi aktif dalam pelaksanaan program kerja sekolah yang sedang berlangsung."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sarah Amanda Putri",
+      "partner": "Rizki Pratama Wijaya",
+      "number": "02",
+      "image": "/images/paslon-2.jpg",
+      "vision": "Menciptakan OSIS SMK Plus Pelita Nusantara yang dinamis dan responsif terhadap kebutuhan siswa, dengan fokus pada pengembangan keterampilan digital dan kewirausahaan untuk menghadapi era industri 4.0.",
+      "missions": [
+        "Mengoptimalkan penggunaan teknologi dalam setiap kegiatan OSIS untuk meningkatkan efisiensi dan jangkauan.",
+        "Memfasilitasi pengembangan keterampilan entrepreneurship siswa melalui program-program inovatif.",
+        "Menciptakan platform digital untuk mempermudah komunikasi dan partisipasi siswa dalam kegiatan sekolah.",
+        "Mendorong kreativitas siswa melalui kompetisi dan workshop berbasis teknologi.",
+        "Membangun kemitraan dengan industri untuk memberikan exposure dunia kerja kepada siswa."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Meluncurkan aplikasi OSIS digital.",
+          "Mengadakan Workshop Digital Marketing.",
+          "Menyelenggarakan Startup Competition.",
+          "Membuat podcast siswa mingguan.",
+          "Mengadakan Coding Bootcamp.",
+          "Menyelenggarakan Digital Art Exhibition."
+        ],
+        "longTerm": [
+          "Mengembangkan inkubator bisnis siswa.",
+          "Membangun kerjasama dengan perusahaan teknologi.",
+          "Menciptakan sistem voting online untuk kegiatan sekolah.",
+          "Mengadakan job fair digital tahunan.",
+          "Mengembangkan platform e-learning siswa."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Muhammad Fajar Sidiq",
+      "partner": "Indira Kusuma Dewi",
+      "number": "03",
+      "image": "/images/paslon-3.jpg",
+      "vision": "Membangun OSIS SMK Plus Pelita Nusantara yang berfokus pada pengembangan karakter, lingkungan hijau, dan kesehatan mental siswa untuk menciptakan generasi yang seimbang dan berkelanjutan.",
+      "missions": [
+        "Mengimplementasikan program go green di seluruh area sekolah dengan melibatkan partisipasi aktif siswa.",
+        "Menyelenggarakan program konseling peer-to-peer untuk mendukung kesehatan mental siswa.",
+        "Mengembangkan kegiatan olahraga dan seni sebagai sarana pengembangan bakat dan minat siswa.",
+        "Menciptakan lingkungan sekolah yang ramah dan inklusif untuk semua siswa.",
+        "Membangun tradisi sekolah yang kuat melalui kegiatan budaya dan sosial."
+      ],
+      "workPrograms": {
+        "shortTerm": [
+          "Meluncurkan program Sekolah Hijau.",
+          "Mengadakan Mental Health Awareness Week.",
+          "Menyelenggarakan Festival Budaya Nusantara.",
+          "Membuat taman baca outdoor.",
+          "Mengadakan workshop mindfulness.",
+          "Menyelenggarakan turnamen olahraga antar kelas."
+        ],
+        "longTerm": [
+          "Membangun greenhouse sekolah.",
+          "Mengembangkan program peer counseling berkelanjutan.",
+          "Menciptakan museum mini sejarah sekolah.",
+          "Mengadakan festival tahunan 'Nusantara Day'.",
+          "Membangun fasilitas olahraga outdoor yang ramah lingkungan."
+        ]
+      }
+    }
+  ]
+}

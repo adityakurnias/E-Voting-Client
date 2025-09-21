@@ -1,3 +1,4 @@
+import { Meta } from './.nuxt/components.d';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 
@@ -9,4 +10,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/PNBMINI.png' },
+      ]
+    }
+  }
 });

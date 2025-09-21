@@ -2,8 +2,7 @@
   <div
     class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/MPK.png')] bg-cover bg-no-repeat">
     <div
-      class="absolute inset-0 bg-[url('~/assets/images/Background/ELEMEN%20EMAS.png')] bg-cover bg-center bg-no-repeat bg-fixed">
-    </div>
+      class="absolute inset-0 bg-[url('~/assets/images/Background/ELEMEN%20EMAS.png')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
     <main
       class="min-h-screen container mx-auto px-4 relative z-20 text-center text-white">
       <section
@@ -32,7 +31,6 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <style></style>
