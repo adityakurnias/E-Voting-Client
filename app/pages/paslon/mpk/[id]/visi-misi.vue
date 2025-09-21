@@ -14,40 +14,55 @@
         <VisiMisiBanner :name1="candidate.name" :name2="candidate.partner" />
 
         <div class="grid grid-cols-2 gap-4 w-[70vw] h-[80vh]">
-          <div class="bg-white/10 rounded-xl p-4 overflow-y-auto">
-            <h3 class="text-lg font-bold text-pink-300 mb-2">Visi</h3>
+          <div class="rounded-xl p-4 overflow-y-auto">
+            <h3
+              class="w-fit px-2 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
+              Visi
+            </h3>
             <p>{{ candidate.vision }}</p>
           </div>
 
-          <div class="row-span-3 bg-white/10 rounded-xl p-4 overflow-y-auto">
-            <h3 class="text-lg font-bold text-pink-300 mb-2">Program Kerja</h3>
+          <div class="row-span-3 relative p-4 overflow-visible border-2 border-purple-primary">
+            <h3
+              class="absolute z-50 -top-4 w-fit px-4 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
+              Program Kerja
+            </h3>
 
-            <h4 class="font-semibold mt-2">Jangka Pendek</h4>
-            <ul class="list-disc list-inside space-y-1">
-              <li
-                v-for="(program, i) in candidate.workPrograms.shortTerm"
-                :key="`sp-${i}`">
-                {{ program }}
-              </li>
-            </ul>
-
-            <h4 class="font-semibold mt-4">Jangka Panjang</h4>
-            <ul class="list-disc list-inside space-y-1">
-              <li
-                v-for="(program, i) in candidate.workPrograms.longTerm"
-                :key="`lp-${i}`">
-                {{ program }}
-              </li>
-            </ul>
+            <div class="overflow-y-auto">
+              <h4 class="font-semibold mt-2">Jangka Pendek</h4>
+              <ol class="list-decimal list-inside space-y-1">
+                <li
+                  class="pl-4 -indent-4"
+                  v-for="(program, i) in candidate.workPrograms.shortTerm"
+                  :key="`sp-${i}`">
+                  {{ program }}
+                </li>
+              </ol>
+              <h4 class="font-semibold mt-4">Jangka Panjang</h4>
+              <ol class="list-decimal list-inside space-y-1">
+                <li
+                  class="pl-4 -indent-4"
+                  v-for="(program, i) in candidate.workPrograms.longTerm"
+                  :key="`lp-${i}`">
+                  {{ program }}
+                </li>
+              </ol>
+            </div>
           </div>
 
-          <div class="row-span-2 bg-white/10 rounded-xl p-4 overflow-y-auto">
-            <h3 class="text-lg font-bold text-pink-300 mb-2">Misi</h3>
-            <ul class="list-decimal list-inside space-y-1">
-              <li v-for="(mission, i) in candidate.missions" :key="`misi-${i}`">
+          <div class="row-span-2 rounded-xl p-4 overflow-y-auto">
+            <h3
+              class="w-fit px-2 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
+              Misi
+            </h3>
+            <ol class="list-decimal list-inside space-y-1">
+              <li
+                class="pl-4 -indent-4"
+                v-for="(mission, i) in candidate.missions"
+                :key="`misi-${i}`">
                 {{ mission }}
               </li>
-            </ul>
+            </ol>
           </div>
         </div>
       </div>
