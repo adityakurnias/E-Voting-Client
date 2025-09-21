@@ -73,7 +73,7 @@
 
             <div
               class="relative bg-mpk rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <a href="/vote/mpk" class="p-2">
+              <a href="/paslon/mpk" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
                 <img
                   loading="lazy"
@@ -88,7 +88,7 @@
               class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
             <div
               class="relative bg-osis rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
-              <a href="/vote/osis" class="p-2">
+              <a href="/paslon/osis" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
                 <img
                   loading="lazy"
