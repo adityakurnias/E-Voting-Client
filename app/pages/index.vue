@@ -62,17 +62,14 @@
       <section
         id="vote"
         class="flex flex-col items-center justify-around mx-auto mb-32">
-        <h2 class="text-2xl font-bold mb-10">
+        <h2 class="text-xl md:text-2xl font-bold mb-10">
           Silahkan Klik Gambar Dibawah Ini Untuk Voting
         </h2>
 
-        <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex gap-8">
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
-              class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-2xl blur-sm opacity-75"></div>
-
-            <div
-              class="relative bg-mpk rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
+              class="relative bg-mpk flex flex-col items-center p-4 rounded-lg shadow-mpk w-64 h-80 duration-300 hover:drop-shadow-biru-mpk hover:scale-105 cursor-pointer max-md:w-40 max-md:h-56">
               <a href="/paslon/mpk" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
                 <img
@@ -85,9 +82,7 @@
 
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
-              class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-sm opacity-75"></div>
-            <div
-              class="relative bg-osis rounded-2xl shadow-2xl w-64 h-80 flex flex-col items-center justify-center p-6">
+              class="relative bg-osis flex flex-col items-center p-4 rounded-lg shadow-osis w-64 h-80 duration-300 hover:drop-shadow-kuning-osis hover:scale-105 cursor-pointer max-md:w-40 max-md:h-56">
               <a href="/paslon/osis" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
                 <img

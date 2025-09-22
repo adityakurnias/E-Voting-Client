@@ -8,26 +8,53 @@
       <section
         class="flex flex-col items-center justify-around mx-auto min-h-screen">
         <div class="flex flex-col">
-          <h2 class="text-2xl font-bold mb-10">
-            Silahkan Klik Gambar Dibawah Ini Untuk Voting
+          <h2 class="text-xl md:text-2xl font-bold mb-10">
+            KETUA & WAKIL
+            <span
+              class="bg-gradient-to-r from-purple-secondary to-purple-primary bg-clip-text text-transparent"
+              >MPK</span
+            >
+            <br />
+            SMK
+            <span
+              class="bg-gradient-to-r from-purple-secondary to-purple-primary bg-clip-text text-transparent"
+              >PLUS</span
+            >
+            PELITA NUSANTARA
           </h2>
-          <div class="flex flex-wrap justify-center gap-8">
-            <a href="/paslon/mpk/1/visi-misi">
-              <CandidateCard
-                image-src="/images/Paslon/MPK/Paslon 1.svg"
-                calon1="Stevano Imanuel Pratama"
-                calon2="Mazaya Ilmina Syareefa"
-                kelas1="XI TKJ 3"
-                kelas2="XI DKV 1" />
-            </a>
-            <a href="/paslon/mpk/2/visi-misi">
-              <CandidateCard
-                image-src="/images/Paslon/MPK/Paslon 2.svg"
-                calon1="Diyas Aqilaalya"
-                calon2="Satria Robby Al Zidane"
-                kelas1="XI RPL 2"
-                kelas2="XI DKV 3" />
-            </a>
+
+          <div class="flex gap-10 flex-wrap justify-center items-center">
+            <div class="flex flex-col items-center gap-4">
+              <a href="/paslon/osis/1/visi-misi" class="w-full max-w-xs">
+                <CandidateCard
+                  image-src="/images/Paslon/OSIS/Paslon 1.svg"
+                  calon1="Stevano Imanuel Pratama"
+                  calon2="Mazaya Ilmina Syareefa"
+                  kelas1="XI TKJ 3"
+                  kelas2="XI DKV 1" />
+              </a>
+              <a
+                href="/paslon/osis/1/visi-misi"
+                class="bg-gradient-to-r from-purple-secondary to-purple-primary px-6 py-2 rounded-full font-semibold hover:scale-105 cursor-pointer transition">
+                NEXT
+              </a>
+            </div>
+
+            <div class="flex flex-col items-center gap-4">
+              <a href="/paslon/osis/2/visi-misi" class="w-full max-w-xs">
+                <CandidateCard
+                  image-src="/images/Paslon/OSIS/Paslon 2.svg"
+                  calon1="Diyas Aqilaalya"
+                  calon2="Satria Robby Al Zidane"
+                  kelas1="XI RPL 2"
+                  kelas2="XI DKV 3" />
+              </a>
+              <a
+                href="/paslon/osis/2/visi-misi"
+                class="bg-gradient-to-r from-purple-secondary to-purple-primary px-6 py-2 rounded-full font-semibold hover:scale-105 cursor-pointer transition">
+                NEXT
+              </a>
+            </div>
           </div>
         </div>
       </section>
