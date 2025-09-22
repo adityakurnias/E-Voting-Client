@@ -34,11 +34,11 @@
             kebawah untuk memilih kandidat MPK dan OSIS favorit anda atau klik
             tombol yang ada dibawah.
           </p>
-          <a
-            href="#vote"
+          <NuxtLink
+            to="#vote"
             class="bg-gradient-to-r from-purple-secondary to-purple-primary cursor-pointer text-white font-semibold py-2 px-10 rounded-full transition-all hover:shadow-lg hover:scale-105 mb-12">
             Saya Ingin Vote Sekarang
-          </a>
+          </NuxtLink>
         </div>
       </section>
 
@@ -70,26 +70,26 @@
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
               class="relative bg-mpk flex flex-col items-center p-4 rounded-lg shadow-mpk w-64 h-80 duration-300 hover:drop-shadow-biru-mpk hover:scale-105 cursor-pointer max-md:w-40 max-md:h-56">
-              <a href="/paslon/mpk" class="p-2">
+              <NuxtLink to="/paslon/mpk" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
                 <img
                   loading="lazy"
                   class="w-40"
                   src="~/assets/images/Orgs/MPK.png" />
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
               class="relative bg-osis flex flex-col items-center p-4 rounded-lg shadow-osis w-64 h-80 duration-300 hover:drop-shadow-kuning-osis hover:scale-105 cursor-pointer max-md:w-40 max-md:h-56">
-              <a href="/paslon/osis" class="p-2">
+              <NuxtLink to="/paslon/osis" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
                 <img
                   loading="lazy"
                   class="w-full"
                   src="~/assets/images/Orgs/OSIS.png" />
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
