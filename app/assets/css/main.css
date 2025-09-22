@@ -13,6 +13,9 @@
 
   --font-primary: "Poppins", sans-serif;
   --default-font-family: var(--font-primary);
+
+  --drop-shadow-kuning-osis: 0 0 50px rgba(253, 224, 71, 0.4);
+  --drop-shadow-biru-mpk: 0 0 50px rgba(147, 197, 253, 0.4);
 }
 
 * {
