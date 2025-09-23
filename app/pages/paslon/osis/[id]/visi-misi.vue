@@ -5,7 +5,7 @@
     <div
       class="w-full flex flex-col items-center gap-4 my-5 lg:flex-row lg:justify-center lg:items-start lg:gap-5">
       <div
-        class="h-48 w-48 rounded-full shadow-lg lg:h-80 lg:w-60 lg:rounded-lg">
+        class="h-52 w-52 flex rounded-full lg:h-80 lg:w-60 lg:rounded-lg">
         <img
           :src="candidate.image"
           :alt="`Foto Paslon ${candidate.number}`"
@@ -13,11 +13,15 @@
       </div>
 
       <div class="flex flex-col gap-5 items-center lg:items-start lg:pt-8">
-        <VisiMisiBanner :name1="candidate.name" :name2="candidate.partner" />
+        <VisiMisiBanner
+          class=""
+          :name1="candidate.name"
+          :name2="candidate.partner" />
 
         <div
           class="grid grid-cols-1 gap-8 w-[90vw] lg:grid-cols-2 lg:gap-4 lg:w-[70vw]">
-          <div class="bg-opacity-30 backdrop-blur-sm rounded-xl p-4">
+          <div
+            class="bg-opacity-30 rounded-xl p-4">
             <h3
               class="w-fit px-2 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
               Visi
@@ -26,7 +30,7 @@
           </div>
 
           <div
-            class="bg-opacity-30 backdrop-blur-sm rounded-xl p-4 lg:row-span-2">
+            class="bg-opacity-30 rounded-xl p-4 lg:row-span-2">
             <h3
               class="w-fit px-2 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary mb-2">
               Misi
@@ -42,7 +46,7 @@
           </div>
 
           <div
-            class="relative p-4 overflow-visible border-2 border-purple-primary bg-opacity-30 backdrop-blur-sm rounded-xl lg:row-span-3 lg:col-start-2 lg:row-start-1">
+            class="relative p-4 overflow-visible border-2 border-purple-primary bg-opacity-30 rounded-xl lg:row-span-3 lg:col-start-2 lg:row-start-1">
             <h3
               class="absolute z-10 -top-4 left-4 w-fit px-4 text-lg font-bold text-white text-shadow-md bg-gradient-to-r from-purple-secondary to-purple-primary">
               Program Kerja
@@ -79,7 +83,7 @@
         BACK
       </button>
       <button
-        @click="vote"
+        @click="handleVote"
         class="cursor-pointer bg-gradient-to-r from-brown-secondary to-brown-primary text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-300">
         VOTE
       </button>
@@ -89,28 +93,56 @@
 
 <script setup>
 import paslonData from "~/data/paslonosis.json";
+import { useVote } from "~/composables/Vote";
+
 const route = useRoute();
-const paslon = route.params.id;
+const router = useRouter();
+const paslonId = parseInt(route.params.id);
+
+// Ambil semua yang dibutuhkan dari composable
+const { selectedOsis, selectCandidate, submitVote } = useVote();
+
 const candidate = computed(() => {
-  const id = parseInt(paslon);
-  return paslonData.candidates.find((c) => c.id === id) || {};
+  return paslonData.candidates.find((c) => c.id === paslonId) || {};
 });
+
 const backgroundStyle = computed(() => {
-  const id = parseInt(paslon);
-  if ([1, 2, 3].includes(id)) {
+  if ([1, 2, 3].includes(paslonId)) {
     return {
-      backgroundImage: `url('/images/Background/VISIMISI/OSIS/Paslon-${id}.png')`,
+      backgroundImage: `url('/images/Background/VISIMISI/OSIS/Paslon-${paslonId}.png')`,
     };
   }
   return {};
 });
 
 const goBack = () => {
-  const router = useRouter();
   router.back();
 };
 
-const vote = () => {
-  console.log(candidate.value.id);
+// Mengganti nama fungsi 'vote' menjadi 'handleVote'
+const handleVote = async () => {
+  if (!candidate.value?.id) return;
+
+  // 1. Pilih kandidat MPK saat ini
+  selectCandidate("osis", candidate.value.id);
+
+  // 2. Cek apakah kandidat OSIS sudah dipilih sebelumnya
+  if (selectedOsis.value !== null) {
+    // Jika SUDAH, kirim vote untuk keduanya
+    try {
+      alert("Pilihan OSIS telah disimpan. Mengirim vote untuk OSIS & MPK...");
+      await submitVote();
+      // Setelah sukses, composable akan menampilkan alert dan kita arahkan ke home
+      router.push("/");
+    } catch (error) {
+      // Error sudah ditangani di dalam composable
+    }
+  } else {
+    // Jika BELUM, arahkan ke halaman pemilihan OSIS
+    alert(
+      "Pilihan OSIS telah disimpan. Sekarang, silakan pilih kandidat OSIS."
+    );
+    router.push("/paslon/mpk");
+  }
 };
 </script>
