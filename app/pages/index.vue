@@ -11,7 +11,7 @@
             class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
             <img
               loading="lazy"
-              src="~//images/Orgs/PNBMINI.png"
+              src="/images/Orgs/PNBMINI.png"
               class="w-8 h-8 md:w-10 md:h-10 object-contain" />
           </div>
           <h1 class="text-md md:text-2xl font-bold">
