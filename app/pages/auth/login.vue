@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed flex flex-col justify-around">
+    class="min-h-screen relative overflow-hidden bg-[url('/images/Background/mobile/landing.png')] sm:bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed flex flex-col justify-around">
     <div
       class="relative z-10 flex flex-col md:flex-row justify-between items-center md:items-start p-6 px-0 gap-4 md:gap-0">
       <div
