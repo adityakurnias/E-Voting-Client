@@ -1,5 +1,7 @@
 import type {
   DashboardResponse,
+  NotVoteItem,
+  NotVoteResponse,
   VotingLog,
   VotingLogsResponse,
 } from "~/types/main.type";
@@ -26,6 +28,10 @@ export const useDashboard = () => {
   const logs = ref<VotingLog[]>([]);
   const loading = ref(false);
   const error = ref<string | null>(null);
+
+  const notVoteData = ref<NotVoteItem[]>([]);
+  // const loadingNotVote = ref(false);
+  const errorNotVote = ref<string | null>(null);
 
   const fetchOsis = async () => {
     try {
@@ -95,6 +101,7 @@ export const useDashboard = () => {
 
       if (res.success) {
         logs.value = res.data;
+        console.log(logs.value)
       } else {
         error.value = res.message;
       }
@@ -105,7 +112,26 @@ export const useDashboard = () => {
     }
   };
 
+  const fetchNotVote = async () => {
+     try {
+    const res = await $fetch<NotVoteResponse>(`${config.public.apiUrl}/admin/kelas-belum-vote-osis`, {
+      method: "GET",
+      headers: {
+        "authorization": `Bearer ${token}`,
+        "accept": "application/json"
+      }
+    })
+
+    notVoteData.value = res.data || []
+  } catch (err: any) {
+    errorNotVote.value = err.message || "Gagal ambil data Not Vote"
+  } finally {
+    loading.value = false
+  }
+  };
+
   return {
+    
     mpkData,
     osisData,
     totalVotes,
@@ -118,5 +144,7 @@ export const useDashboard = () => {
     loading,
     error,
     votingLogs,
+    fetchNotVote,
+    notVoteData
   };
 };

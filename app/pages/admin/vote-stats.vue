@@ -8,36 +8,41 @@
         <p class="text-gray-300">E-Voting SMK Plus Pelita Nusantara</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 mb-8">
         <div
-          class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
+          class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
         >
           <div class="text-2xl font-bold">{{ totalVotes }}</div>
           <div class="text-sm">Total Votes</div>
         </div>
         <div
-          class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
+          class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
         >
           <div class="text-2xl font-bold">{{ mpkVotes }}</div>
           <div class="text-sm">MPK Votes</div>
         </div>
         <div
-          class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
+          class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
         >
           <div class="text-2xl font-bold">{{ osisVotes }}</div>
           <div class="text-sm">OSIS Votes</div>
         </div>
         <div
-          class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
+          class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] py-4 px-10 rounded-lg text-center cursor-pointer"
+          @click="openNotVote"
         >
-          <div class="text-2xl font-bold">85%</div>
+          <div
+            class="text-xl bg-gradient-to-r from-purple-secondary to-purple-primary text-white font-semibold py-2 px-5 rounded-full transition-all hover:shadow-lg hover:scale-105"
+          >
+            Details
+          </div>
           <div class="text-sm">Not Vote</div>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="flex flex-col md:flex-row gap-6 mb-8">
         <div
-          class="bg-gradient-to-r from-brown-secondary to-brown-primary rounded-lg p-6"
+          class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary rounded-lg p-6"
         >
           <h3 class="text-xl font-bold mb-4">Hasil MPK</h3>
           <PieChart
@@ -49,7 +54,7 @@
         </div>
 
         <div
-          class="bg-gradient-to-r from-brown-secondary to-brown-primary rounded-lg p-6"
+          class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary rounded-lg p-6"
         >
           <h3 class="text-xl font-bold mb-4">Hasil OSIS</h3>
           <PieChart
@@ -61,7 +66,9 @@
         </div>
       </div>
 
-      <div class="bg-gradient-to-r from-brown-primary to-brown-secondary rounded-lg p-6">
+      <div
+        class="bg-gradient-to-r from-brown-primary to-brown-secondary rounded-lg p-6"
+      >
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold">Activity Logs</h3>
           <button
@@ -78,7 +85,7 @@
           <div
             v-for="log in logs"
             :key="log.id"
-            class="flex justify-between items-center p-3 bg-brown-secondary  rounded text-sm"
+            class="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-brown-secondary rounded text-sm gap-1"
           >
             <span>
               {{ log.user.name }} memilih OSIS Kandidat {{ log.voted_osis }} dan
@@ -92,9 +99,39 @@
       </div>
     </div>
   </div>
+
+  <div
+    v-if="showNotVoteModal"
+    class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+  >
+    <div class="bg-white rounded-lg p-6 max-w-sm w-full shadow-xl text-center">
+      <h2 class="text-xl font-bold mb-4">Belum Voting</h2>
+      <ul class="space-y-2">
+        <li
+          v-for="item in notVoteData"
+          :key="item.kelas"
+          class="p-2 bg-gray-100 rounded"
+        >
+          <div class="font-semibold">{{ item.kelas }}</div>
+          <div class="text-sm">
+            Belum Vote: {{ item.belum_vote }} / Total: {{ item.total }}
+          </div>
+        </li>
+      </ul>
+      <button
+        @click="showNotVoteModal = false"
+        class="bg-gradient-to-r from-purple-secondary to-purple-primary text-white px-4 py-2 rounded-lg hover:scale-105 transition"
+      >
+        Tutup
+      </button>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
+const showNotVoteModal = ref(false);
+const notVoteCount = ref(0);
+
 const {
   mpkData,
   osisData,
@@ -106,7 +143,14 @@ const {
   logs,
   loading,
   error,
+  fetchNotVote,
+  notVoteData,
 } = useDashboard();
+
+const openNotVote = async () => {
+  showNotVoteModal.value = true;
+  await fetchNotVote();
+};
 
 onMounted(() => {
   fetchAll();

@@ -39,3 +39,18 @@ export interface VotingLogsResponse {
   data: VotingLog[]
 }
 
+export interface NotVoteItem {
+  kelas: string
+  total: number
+  sudah_vote: number
+  belum_vote: number
+}
+
+export interface NotVoteResponse {
+  success: boolean
+  message: string
+  data: NotVoteItem[]
+}
+
+
+
