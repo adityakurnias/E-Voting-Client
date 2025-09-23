@@ -83,6 +83,8 @@ export const useVote = () => {
       alert(error.data?.message || 'Terjadi kesalahan saat mengirim vote.');
       throw error;
     }
+
+    
   };
 
   return {
