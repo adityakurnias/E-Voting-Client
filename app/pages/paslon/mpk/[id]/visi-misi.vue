@@ -127,7 +127,7 @@ const handleVote = async () => {
       alert("Pilihan MPK telah disimpan. Mengirim vote untuk OSIS & MPK...");
       await submitVote();
       // Setelah sukses, composable akan menampilkan alert dan kita arahkan ke home
-      router.push("/");
+      router.push("/thanks");
     } catch (error) {
       // Error sudah ditangani di dalam composable
     }
