@@ -129,8 +129,11 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+    path: "/vote-stats",
+})
+
 const showNotVoteModal = ref(false);
-const notVoteCount = ref(0);
 
 const {
   mpkData,
