@@ -12,19 +12,19 @@
         <div
           class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
         >
-          <div class="text-2xl font-bold">256</div>
+          <div class="text-2xl font-bold">{{ totalVotes }}</div>
           <div class="text-sm">Total Votes</div>
         </div>
         <div
           class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
         >
-          <div class="text-2xl font-bold">128</div>
+          <div class="text-2xl font-bold">{{ mpkVotes }}</div>
           <div class="text-sm">MPK Votes</div>
         </div>
         <div
           class="bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] p-4 rounded-lg text-center"
         >
-          <div class="text-2xl font-bold">128</div>
+          <div class="text-2xl font-bold">{{ osisVotes }}</div>
           <div class="text-sm">OSIS Votes</div>
         </div>
         <div
@@ -61,46 +61,32 @@
         </div>
       </div>
 
-      <div class="bg-white rounded-lg p-6">
+      <div class="bg-gradient-to-r from-brown-primary to-brown-secondary rounded-lg p-6">
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold">Activity Logs</h3>
           <button
-            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            @click="votingLogs"
+            class="bg-gradient-to-r from-purple-secondary to-purple-primary cursor-pointer text-white font-semibold py-2 px-10 rounded-full transition-all hover:shadow-lg hover:scale-105"
           >
             Refresh
           </button>
         </div>
 
-        <div class="space-y-2 max-h-64 overflow-y-auto">
+        <div v-if="loading" class="text-gray-500 text-center">Loading...</div>
+
+        <div v-else class="space-y-2 max-h-64 overflow-y-auto">
           <div
-            class="flex justify-between items-center p-3 bg-gray-50 rounded text-sm"
+            v-for="log in logs"
+            :key="log.id"
+            class="flex justify-between items-center p-3 bg-brown-secondary  rounded text-sm"
           >
-            <span>Vote baru untuk MPK Kandidat 2</span>
-            <span class="text-gray-500">14:30:25</span>
-          </div>
-          <div
-            class="flex justify-between items-center p-3 bg-gray-50 rounded text-sm"
-          >
-            <span>Vote baru untuk OSIS Kandidat 1</span>
-            <span class="text-gray-500">14:28:12</span>
-          </div>
-          <div
-            class="flex justify-between items-center p-3 bg-gray-50 rounded text-sm"
-          >
-            <span>Vote baru untuk MPK Kandidat 1</span>
-            <span class="text-gray-500">14:25:08</span>
-          </div>
-          <div
-            class="flex justify-between items-center p-3 bg-gray-50 rounded text-sm"
-          >
-            <span>Vote baru untuk OSIS Kandidat 3</span>
-            <span class="text-gray-500">14:22:33</span>
-          </div>
-          <div
-            class="flex justify-between items-center p-3 bg-gray-50 rounded text-sm"
-          >
-            <span>Vote baru untuk MPK Kandidat 3</span>
-            <span class="text-gray-500">14:20:15</span>
+            <span>
+              {{ log.user.name }} memilih OSIS Kandidat {{ log.voted_osis }} dan
+              MPK Kandidat {{ log.voted_mpk }}
+            </span>
+            <span class="text-gray-500">
+              {{ new Date(log.created_at).toLocaleTimeString() }}
+            </span>
           </div>
         </div>
       </div>
@@ -109,10 +95,21 @@
 </template>
 
 <script setup lang="ts">
-const { mpkData, osisData, totalVotes, mpkVotes, osisVotes, fetchAll } =
-  useDashboard();
+const {
+  mpkData,
+  osisData,
+  totalVotes,
+  mpkVotes,
+  osisVotes,
+  fetchAll,
+  votingLogs,
+  logs,
+  loading,
+  error,
+} = useDashboard();
 
 onMounted(() => {
   fetchAll();
+  votingLogs();
 });
 </script>
