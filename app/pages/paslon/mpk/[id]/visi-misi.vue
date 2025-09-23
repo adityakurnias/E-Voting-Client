@@ -1,7 +1,7 @@
 <template>
   <div
-    :style="backgroundStyle"
-    class="min-h-screen w-screen relative overflow-hidden bg-cover bg-no-repeat flex flex-col justify-between">
+    :class="backgroundClass"
+    class="w-screen relative bg-cover bg-no-repeat flex flex-col justify-between bg-fixed">
     <div
       class="w-full flex flex-col items-center gap-4 my-5 lg:flex-row lg:justify-center lg:items-start lg:gap-5">
       <div
@@ -105,13 +105,8 @@ const candidate = computed(() => {
   return paslonData.candidates.find((c) => c.id === paslonId) || {};
 });
 
-const backgroundStyle = computed(() => {
-  if ([1, 2, 3].includes(paslonId)) {
-    return {
-      backgroundImage: `url('/images/Background/VISIMISI/MPK/Paslon-${paslonId}.png')`,
-    };
-  }
-  return {};
+const backgroundClass = computed(() => {
+  return `bg-mpk-paslon-${paslonId}`;
 });
 
 const goBack = () => {
@@ -143,3 +138,21 @@ const handleVote = async () => {
   }
 };
 </script>
+
+<style scoped>
+.bg-mpk-paslon-1 {
+  background-image: url('/images/Background/mobile/mpk-01.png');
+}
+.bg-mpk-paslon-2 {
+  background-image: url('/images/Background/mobile/mpk-02.png');
+}
+
+@media (min-width: 640px) {
+  .bg-mpk-paslon-1 {
+    background-image: url('/images/Background/VISIMISI/MPK/Paslon-1.png');
+  }
+  .bg-mpk-paslon-2 {
+    background-image: url('/images/Background/VISIMISI/MPK/Paslon-2.png');
+  }
+}
+</style>

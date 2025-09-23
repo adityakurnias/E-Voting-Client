@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed">
+    class="min-h-screen relative overflow-hidden bg-[url('/images/Background/mobile/landing.png')] sm:bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed">
     <main
       class="container mx-auto px-4 relative z-10 max-w-4xl text-center text-white">
       <section
@@ -11,7 +11,7 @@
             class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
             <img
               loading="lazy"
-              src="~//images/Orgs/PNBMINI.png"
+              src="/images/Orgs/PNBMINI.png"
               class="w-8 h-8 md:w-10 md:h-10 object-contain" />
           </div>
           <h1 class="text-md md:text-2xl font-bold">

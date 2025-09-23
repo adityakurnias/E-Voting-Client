@@ -1,25 +1,25 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed flex flex-col justify-around">
+    class="min-h-screen relative overflow-hidden bg-[url('/images/Background/mobile/landing.png')] sm:bg-[url('~/assets/images/Background/KPOP.png')] bg-cover bg-no-repeat bg-fixed flex flex-col justify-around">
     <div
       class="relative z-10 flex flex-col md:flex-row justify-between items-center md:items-start p-6 px-0 gap-4 md:gap-0">
       <div
         class="flex space-x-2 md:space-x-2 rounded-full md:rounded-none md:rounded-r-full p-2 bg-gradient-to-r from-purple-primary to-purple-secondary">
         <img
           loading="lazy"
-          src="~//images/Orgs/PNBMINI.png"
+          src="/images/Orgs/PNBMINI.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
         <img
           loading="lazy"
-          src="~//images/Orgs/MPKMINI.png"
+          src="/images/Orgs/MPKMINI.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
         <img
           loading="lazy"
-          src="~//images/Orgs/OSISMINI.png"
+          src="/images/Orgs/OSISMINI.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
         <img
           loading="lazy"
-          src="~//images/Orgs/KPUMINI.png"
+          src="/images/Orgs/KPUMINI.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
       </div>
 
@@ -27,15 +27,15 @@
         class="hidden md:flex space-x-2 md:space-x-2 rounded-full md:rounded-none md:rounded-l-full p-2 bg-gradient-to-r from-purple-secondary to-purple-primary">
         <img
           loading="lazy"
-          src="~/assets/images/Divisi/MM.png"
+          src="/images/Divisi/MM.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
         <img
           loading="lazy"
-          src="~/assets/images/Divisi/RPL.png"
+          src="/images/Divisi/RPL.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
         <img
           loading="lazy"
-          src="~/assets/images/Divisi/TKJ.png"
+          src="/images/Divisi/TKJ.png"
           class="w-10 h-10 md:w-12 md:h-12 object-contain" />
       </div>
     </div>
@@ -112,15 +112,15 @@
       class="self-center md:hidden flex items-center justify-center space-x-2 md:space-x-2 rounded-full md:rounded-l-full w-44 p-2 bg-gradient-to-r from-purple-secondary to-purple-primary">
       <img
         loading="lazy"
-        src="~/assets/images/Divisi/MM.png"
+        src="/images/Divisi/MM.png"
         class="w-10 h-10 md:w-12 md:h-12 object-contain" />
       <img
         loading="lazy"
-        src="~/assets/images/Divisi/RPL.png"
+        src="/images/Divisi/RPL.png"
         class="w-10 h-10 md:w-12 md:h-12 object-contain" />
       <img
         loading="lazy"
-        src="~/assets/images/Divisi/TKJ.png"
+        src="/images/Divisi/TKJ.png"
         class="w-10 h-10 md:w-12 md:h-12 object-contain" />
     </div>
   </div>

@@ -1,8 +1,8 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/Background/OSIS.png')] bg-cover bg-no-repeat">
+    class="min-h-screen relative overflow-hidden bg-[url('/images/Background/mobile/osis.png')] sm:bg-[url('~/assets/images/Background/OSIS.png')] bg-cover bg-no-repeat">
     <div
-      class="absolute z-10 inset-0 bg-[url('~/assets/images/Background/ELEMEN%20EMAS.png')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
+      class="absolute max-sm:hidden z-10 inset-0 bg-[url('~/assets/images/Background/ELEMEN%20EMAS.png')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
 
     <main
       class="min-h-screen z-20 container mx-auto px-4 relative text-center text-white">
