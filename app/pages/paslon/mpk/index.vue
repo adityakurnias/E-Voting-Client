@@ -25,32 +25,32 @@
 
           <div class="flex gap-10 flex-wrap justify-center items-center">
             <div class="flex flex-col items-center gap-4">
-              <NuxtLink to="/paslon/osis/1/visi-misi" class="w-full max-w-xs">
+              <NuxtLink to="/paslon/mpk/1/visi-misi" class="w-full max-w-xs">
                 <CandidateCard
-                  image-src="/images/Paslon/OSIS/Paslon 1.svg"
+                  image-src="/images/Paslon/MPK/Paslon 1.svg"
                   calon1="Stevano Imanuel Pratama"
                   calon2="Mazaya Ilmina Syareefa"
                   kelas1="XI TKJ 3"
                   kelas2="XI DKV 1" />
               </NuxtLink>
               <NuxtLink
-                to="/paslon/osis/1/visi-misi"
+                to="/paslon/mpk/1/visi-misi"
                 class="bg-gradient-to-r from-purple-secondary to-purple-primary px-6 py-2 rounded-full font-semibold hover:scale-105 cursor-pointer transition">
                 NEXT
               </NuxtLink>
             </div>
 
             <div class="flex flex-col items-center gap-4">
-              <NuxtLink to="/paslon/osis/2/visi-misi" class="w-full max-w-xs">
+              <NuxtLink to="/paslon/mpk/2/visi-misi" class="w-full max-w-xs">
                 <CandidateCard
-                  image-src="/images/Paslon/OSIS/Paslon 2.svg"
+                  image-src="/images/Paslon/MPK/Paslon 2.svg"
                   calon1="Diyas Aqilaalya"
                   calon2="Satria Robby Al Zidane"
                   kelas1="XI RPL 2"
                   kelas2="XI DKV 3" />
               </NuxtLink>
               <NuxtLink
-                to="/paslon/osis/2/visi-misi"
+                to="/paslon/mpk/2/visi-misi"
                 class="bg-gradient-to-r from-purple-secondary to-purple-primary px-6 py-2 rounded-full font-semibold hover:scale-105 cursor-pointer transition">
                 NEXT
               </NuxtLink>

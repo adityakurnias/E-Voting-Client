@@ -11,7 +11,7 @@
             class="p-1 bg-brown-secondary rounded-full flex items-center justify-center mr-4">
             <img
               loading="lazy"
-              src="~/assets/images/Orgs/PNBMINI.png"
+              src="~//images/Orgs/PNBMINI.png"
               class="w-8 h-8 md:w-10 md:h-10 object-contain" />
           </div>
           <h1 class="text-md md:text-2xl font-bold">
@@ -69,26 +69,23 @@
         <div class="flex gap-8">
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
-              class="relative bg-mpk flex flex-col items-center p-4 rounded-lg shadow-mpk w-64 h-80 duration-300 hover:drop-shadow-biru-mpk hover:scale-105 cursor-pointer max-md:w-40 max-md:h-56">
+              class="relative bg-mpk flex flex-col items-center p-4 rounded-lg shadow-mpk w-64 h-80 duration-300 hover:drop-shadow-biru-mpk hover:scale-105 cursor-pointer max-md:w-36 max-md:h-52">
               <NuxtLink to="/paslon/mpk" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">MPK</h2>
-                <img
-                  loading="lazy"
-                  class="w-40"
-                  src="~/assets/images/Orgs/MPK.png" />
+                <img loading="lazy" class="w-40" src="/images/Orgs/MPK.png" />
               </NuxtLink>
             </div>
           </div>
 
           <div class="relative hover:scale-105 transition-all cursor-pointer">
             <div
-              class="relative bg-osis flex flex-col items-center p-4 rounded-lg shadow-osis w-64 h-80 duration-300 hover:drop-shadow-kuning-osis hover:scale-105 cursor-pointer max-md:w-40 max-md:h-56">
+              class="relative bg-osis flex flex-col items-center p-4 rounded-lg shadow-osis w-64 h-80 duration-300 hover:drop-shadow-kuning-osis hover:scale-105 cursor-pointer max-md:w-36 max-md:h-52">
               <NuxtLink to="/paslon/osis" class="p-2">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">OSIS</h2>
                 <img
                   loading="lazy"
                   class="w-full"
-                  src="~/assets/images/Orgs/OSIS.png" />
+                  src="/images/Orgs/OSIS.png" />
               </NuxtLink>
             </div>
           </div>
