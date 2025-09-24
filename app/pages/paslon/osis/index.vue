@@ -45,8 +45,8 @@
               <NuxtLink to="/paslon/osis/2/visi-misi" class="w-full max-w-xs">
                 <CandidateCard
                   image-src="/images/Paslon/OSIS/Paslon 2.svg"
-                  calon1="Diyas Aqilaalya"
-                  calon2="Satria Robby Al Zidane"
+                  calon1="Aditya Putra Sujana"
+                  calon2="Meidina Aulia Rahma"
                   kelas1="XI DKV 3"
                   kelas2="XI LPB 2" />
               </NuxtLink>
@@ -61,8 +61,8 @@
               <NuxtLink to="/paslon/osis/3/visi-misi" class="w-full max-w-xs">
                 <CandidateCard
                   image-src="/images/Paslon/OSIS/Paslon 3.svg"
-                  calon1="Diyas Aqilaalya"
-                  calon2="Satria Robby Al Zidane"
+                  calon1="Al Fath Rizky Sudjana"
+                  calon2="Rindra Arsyia Az-zahra"
                   kelas1="XI RPL 1"
                   kelas2="XI DKV 1" />
               </NuxtLink>
