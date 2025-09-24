@@ -46,11 +46,24 @@ export interface NotVoteItem {
   belum_vote: number
 }
 
-export interface NotVoteResponse {
-  success: boolean
-  message: string
-  data: NotVoteItem[]
+// export interface NotVoteResponse {
+//   success: boolean
+//   message: string
+//   data: NotVoteItem[]
+// }
+
+export interface Student {
+  id: number;
+  name: string;
+  class: string;
 }
+
+export interface NotVoteResponse {
+  success: boolean;
+  kelas: string;
+  data: Student[];
+}
+
 
 
 

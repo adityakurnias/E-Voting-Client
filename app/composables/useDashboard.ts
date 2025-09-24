@@ -2,6 +2,7 @@ import type {
   DashboardResponse,
   NotVoteItem,
   NotVoteResponse,
+  Student,
   VotingLog,
   VotingLogsResponse,
 } from "~/types/main.type";
@@ -30,7 +31,7 @@ export const useDashboard = () => {
   const error = ref<string | null>(null);
 
   const notVoteData = ref<NotVoteItem[]>([]);
-  // const loadingNotVote = ref(false);
+  const students = ref<Student[]>([]);
   const errorNotVote = ref<string | null>(null);
 
   const fetchOsis = async () => {
@@ -100,8 +101,8 @@ export const useDashboard = () => {
       );
 
       if (res.success) {
-        logs.value = res.data;
         console.log(logs.value)
+        logs.value = res.data;
       } else {
         error.value = res.message;
       }
@@ -122,13 +123,18 @@ export const useDashboard = () => {
       }
     })
 
-    notVoteData.value = res.data || []
+    if (res.success) {
+      students.value = res.data;
+    }
+
   } catch (err: any) {
     errorNotVote.value = err.message || "Gagal ambil data Not Vote"
   } finally {
     loading.value = false
   }
   };
+
+  
 
   return {
     
@@ -145,6 +151,7 @@ export const useDashboard = () => {
     error,
     votingLogs,
     fetchNotVote,
-    notVoteData
+    notVoteData,
+    students
   };
 };
