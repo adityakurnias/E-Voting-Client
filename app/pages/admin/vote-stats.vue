@@ -29,7 +29,7 @@
         </div>
         <div
           class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] py-4 px-10 rounded-lg text-center cursor-pointer"
-          @click="openNotVote"
+          @click=""
         >
           <div
             class="text-xl bg-gradient-to-r from-purple-secondary to-purple-primary text-white font-semibold py-2 px-5 rounded-full transition-all hover:shadow-lg hover:scale-105"
@@ -67,33 +67,61 @@
       </div>
 
       <div
-        class="bg-gradient-to-r from-brown-primary to-brown-secondary rounded-lg p-6"
+        class="bg-gradient-to-r from-brown-primary to-brown-secondary rounded-lg p-6 mt-8"
       >
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-xl font-bold">Activity Logs</h3>
-          <button
-            @click="votingLogs"
-            class="bg-gradient-to-r from-purple-secondary to-purple-primary cursor-pointer text-white font-semibold py-2 px-10 rounded-full transition-all hover:shadow-lg hover:scale-105"
+          <h3 class="text-xl font-bold">
+            Belum Voting {{ selectedKelas || "" }}
+          </h3>
+
+          <select
+            v-model="selectedKelas"
+            @change="fetchSiswaByKelas"
+            class="px-3 py-2 rounded-lg border border-gray-300"
           >
-            Refresh
-          </button>
+            <option disabled value="">Pilih Kelas</option>
+            <option v-for="k in daftarKelas" :key="k" :value="k">
+              {{ k }}
+            </option>
+          </select>
         </div>
 
-        <div v-if="loading" class="text-gray-500 text-center">Loading...</div>
+        <!-- Tabel -->
+        <!-- <div v-if="loading" class="text-gray-500 text-center py-4">
+          Loading...
+        </div> -->
 
-        <div v-else class="space-y-2 max-h-64 overflow-y-auto">
-          <div
-            v-for="log in logs"
-            :key="log.id"
-            class="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 bg-brown-secondary rounded text-sm gap-1"
+        <div class="overflow-x-auto">
+          <table
+            v-if="students.length > 0"
+            class="min-w-full text-sm text-left text-gray-700"
           >
-            <span>
-              {{ log.user.name }} memilih OSIS Kandidat {{ log.voted_osis }} dan
-              MPK Kandidat {{ log.voted_mpk }}
-            </span>
-            <span class="text-gray-500">
-              {{ new Date(log.created_at).toLocaleTimeString() }}
-            </span>
+            <thead>
+              <tr class="bg-brown-secondary text-[#19303E]">
+                <th class="px-4 py-2">No</th>
+                <th class="px-4 py-2">Nama</th>
+                <th class="px-4 py-2">Kelas</th>
+                <th class="px-4 py-2">Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(siswa, index) in students"
+                :key="siswa.id"
+                class="border-b hover:bg-brown-secondary/30"
+              >
+                <td class="px-4 py-2">{{ index + 1 }}</td>
+                <td class="px-4 py-2">{{ siswa.name }}</td>
+                <td class="px-4 py-2">{{ siswa.class }}</td>
+                <td class="px-4 py-2 text-red-600 font-semibold">
+                  belum vote
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div v-else class="text-center text-gray-500 py-4">
+            Tidak ada siswa yang belum vote di kelas ini 🎉
           </div>
         </div>
       </div>
@@ -129,11 +157,17 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    path: "/vote-stats",
-})
+import type { NotVoteResponse } from "~/types/main.type";
 
+definePageMeta({
+  path: "/vote-stats",
+});
+const config = useRuntimeConfig();
 const showNotVoteModal = ref(false);
+const selectedKelas = ref("");
+const daftarKelas = ref<string[]>([]);
+const token =
+  typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
 const {
   mpkData,
@@ -143,20 +177,40 @@ const {
   osisVotes,
   fetchAll,
   votingLogs,
-  logs,
   loading,
-  error,
-  fetchNotVote,
   notVoteData,
+  students,
 } = useDashboard();
 
-const openNotVote = async () => {
-  showNotVoteModal.value = true;
-  await fetchNotVote();
+const fetchDaftarKelas = async () => {
+  daftarKelas.value = ["XII.RPL-1", "XII.RPL-2", "XII.TKJ-1", "XII.TKJ-2"];
+};
+
+const fetchSiswaByKelas = async () => {
+  if (!selectedKelas.value) return;
+  loading.value = true;
+  try {
+    const res = await $fetch<NotVoteResponse>(
+      `${config.public.apiUrl}/admin/kelas/${selectedKelas.value}/osis-belum-vote`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    students.value = res.data;
+    console.log(res);
+  } catch (err) {
+    console.error(err);
+  } finally {
+    loading.value = false;
+  }
 };
 
 onMounted(() => {
   fetchAll();
   votingLogs();
+  fetchDaftarKelas();
 });
 </script>
