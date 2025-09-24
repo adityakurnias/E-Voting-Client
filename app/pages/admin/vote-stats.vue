@@ -113,9 +113,7 @@
                 <td class="px-4 py-2">{{ index + 1 }}</td>
                 <td class="px-4 py-2">{{ siswa.name }}</td>
                 <td class="px-4 py-2">{{ siswa.class }}</td>
-                <td class="px-4 py-2 text-red-600 font-semibold">
-                  belum vote
-                </td>
+                <td class="px-4 py-2 text-red-600 font-semibold">belum vote</td>
               </tr>
             </tbody>
           </table>
@@ -183,7 +181,40 @@ const {
 } = useDashboard();
 
 const fetchDaftarKelas = async () => {
-  daftarKelas.value = ["XII.RPL-1", "XII.RPL-2", "XII.TKJ-1", "XII.TKJ-2"];
+  daftarKelas.value = [
+    "X.RPL-1",
+    "X.RPL-2",
+    "X.TOI-1",
+    "X.TKJ-1",
+    "X.TKJ-2",
+    "X.DKV-1",
+    "X.DKV-2",
+    "X.DKV-3",
+    "X.LPB-1",
+    "X.LPB-2",
+    "XI.RPL-1",
+    "XI.RPL-2",
+    "XI.TKJ-1",
+    "XI.TKJ-2",
+    "XI.TKJ-3",
+    "XI.DKV-1",
+    "XI.DKV-2",
+    "XI.DKV-3",
+    "XI.DKV-4",
+    "XI.LPB-1",
+    "XI.LPB-2",
+    "XII.RPL-1",
+    "XII.RPL-2",
+    "XII.RPL-3",
+    "XII.TKJ-1",
+    "XII.TKJ-2",
+    "XII.MM-1",
+    "XII.MM-2",
+    "XII.MM-3",
+    "XII.MM-4",
+    "XII.PKM-1",
+    "XII.PKM-2",
+  ];
 };
 
 const fetchSiswaByKelas = async () => {
