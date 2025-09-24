@@ -27,7 +27,7 @@
           <div class="text-2xl font-bold">{{ osisVotes }}</div>
           <div class="text-sm">OSIS Votes</div>
         </div>
-        <div
+        <!-- <div
           class="flex-1 bg-gradient-to-r from-brown-secondary to-brown-primary text-[#19303E] py-4 px-10 rounded-lg text-center cursor-pointer"
           @click=""
         >
@@ -37,7 +37,7 @@
             Details
           </div>
           <div class="text-sm">Not Vote</div>
-        </div>
+        </div> -->
       </div>
 
       <div class="flex flex-col md:flex-row gap-6 mb-8">
@@ -76,7 +76,7 @@
 
           <select
             v-model="selectedKelas"
-            @change="fetchSiswaByKelas"
+            @change="fetchSiswaByKelas(selectedKelas)"
             class="px-3 py-2 rounded-lg border border-gray-300"
           >
             <option disabled value="">Pilih Kelas</option>
@@ -91,6 +91,7 @@
           Loading...
         </div> -->
 
+        <!-- Table nama siswa belum vote -->
         <div class="overflow-x-auto">
           <table
             v-if="students.length > 0"
@@ -120,6 +121,44 @@
 
           <div v-else class="text-center text-gray-500 py-4">
             Tidak ada siswa yang belum vote di kelas ini 🎉
+          </div>
+        </div>
+      </div>
+
+      <!-- Logging -->
+      <div
+        class="bg-gradient-to-r from-brown-primary to-brown-secondary rounded-lg p-6 mt-8"
+      >
+        <h3 class="text-xl font-bold mb-4">Voting Logs</h3>
+        <div class="overflow-x-auto">
+          <table
+            v-if="logs.length > 0"
+            class="min-w-full text-sm text-left text-gray-700"
+          >
+            <thead>
+              <tr class="bg-brown-secondary text-[#19303E]">
+                <th class="px-4 py-2">No</th>
+                <th class="px-4 py-2">Log</th>
+                <th class="px-4 py-2">Waktu Voting</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(log, index) in logs"
+                :key="log.id"
+                class="border-b hover:bg-brown-secondary/30"
+              >
+                <td class="px-4 py-2">{{ index + 1 }}</td>
+                <td class="px-4 py-2">
+                  {{ log.user.name }} memilih OSIS Kandidat {{ log.voted_osis }}
+                  dan MPK Kandidat {{ log.voted_mpk }}
+                </td>
+                <td class="px-4 py-2">{{ new Date(log.created_at).toLocaleString() }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div v-else class="text-center text-gray-500 py-4">
+            Tidak ada log voting tersedia.
           </div>
         </div>
       </div>
@@ -155,89 +194,37 @@
 </template>
 
 <script setup lang="ts">
-import type { NotVoteResponse } from "~/types/main.type";
+import type { NotVoteListResponse } from "~/types/main.type";
 
 definePageMeta({
   path: "/vote-stats",
 });
 const config = useRuntimeConfig();
-const showNotVoteModal = ref(false);
-const selectedKelas = ref("");
-const daftarKelas = ref<string[]>([]);
-const token =
-  typeof window !== "undefined" ? localStorage.getItem("token") : null;
+
+
 
 const {
-  mpkData,
-  osisData,
-  totalVotes,
-  mpkVotes,
-  osisVotes,
-  fetchAll,
-  votingLogs,
-  loading,
-  notVoteData,
-  students,
-} = useDashboard();
+    mpkData,
+    osisData,
+    totalVotes,
+    mpkVotes,
+    osisVotes,
+    fetchAll,
+    votingLogs,
+    loading,
+    notVoteData,
+    students,
+    selectedKelas,
+    daftarKelas,
+    showNotVoteModal,
+    fetchDaftarKelas,
+    fetchSiswaByKelas,
+    logs,
+  } = useDashboard();
 
-const fetchDaftarKelas = async () => {
-  daftarKelas.value = [
-    "X.RPL-1",
-    "X.RPL-2",
-    "X.TOI-1",
-    "X.TKJ-1",
-    "X.TKJ-2",
-    "X.DKV-1",
-    "X.DKV-2",
-    "X.DKV-3",
-    "X.LPB-1",
-    "X.LPB-2",
-    "XI.RPL-1",
-    "XI.RPL-2",
-    "XI.TKJ-1",
-    "XI.TKJ-2",
-    "XI.TKJ-3",
-    "XI.DKV-1",
-    "XI.DKV-2",
-    "XI.DKV-3",
-    "XI.DKV-4",
-    "XI.LPB-1",
-    "XI.LPB-2",
-    "XII.RPL-1",
-    "XII.RPL-2",
-    "XII.RPL-3",
-    "XII.TKJ-1",
-    "XII.TKJ-2",
-    "XII.MM-1",
-    "XII.MM-2",
-    "XII.MM-3",
-    "XII.MM-4",
-    "XII.PKM-1",
-    "XII.PKM-2",
-  ];
-};
 
-const fetchSiswaByKelas = async () => {
-  if (!selectedKelas.value) return;
-  loading.value = true;
-  try {
-    const res = await $fetch<NotVoteResponse>(
-      `${config.public.apiUrl}/admin/kelas/${selectedKelas.value}/osis-belum-vote`,
-      {
-        method: "GET",
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    students.value = res.data;
-    console.log(res);
-  } catch (err) {
-    console.error(err);
-  } finally {
-    loading.value = false;
-  }
-};
+
+
 
 onMounted(() => {
   fetchAll();

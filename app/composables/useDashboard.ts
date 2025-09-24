@@ -1,16 +1,17 @@
 import type {
   DashboardResponse,
   NotVoteItem,
-  NotVoteResponse,
+  NotVoteListResponse,
   Student,
   VotingLog,
   VotingLogsResponse,
+  StudentListResponse,
+  VotingLogItem,
 } from "~/types/main.type";
 
 export const useDashboard = () => {
   const config = useRuntimeConfig();
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
   const mpkData = ref<{ labels: string[]; values: number[] }>({
     labels: [],
@@ -26,13 +27,17 @@ export const useDashboard = () => {
   const mpkVotes = ref(0);
   const osisVotes = ref(0);
 
-  const logs = ref<VotingLog[]>([]);
+  const logs = ref<VotingLogItem[]>([]);
   const loading = ref(false);
   const error = ref<string | null>(null);
 
   const notVoteData = ref<NotVoteItem[]>([]);
   const students = ref<Student[]>([]);
   const errorNotVote = ref<string | null>(null);
+
+  const selectedKelas = ref("");
+  const daftarKelas = ref<string[]>([]);
+  const showNotVoteModal = ref(false);
 
   const fetchOsis = async () => {
     try {
@@ -87,6 +92,7 @@ export const useDashboard = () => {
     totalVotes.value = osisVotes.value + mpkVotes.value;
   };
 
+  // Logging
   const votingLogs = async () => {
     try {
       const res = await $fetch<VotingLogsResponse>(
@@ -101,8 +107,8 @@ export const useDashboard = () => {
       );
 
       if (res.success) {
-        console.log(logs.value)
-        logs.value = res.data;
+        console.log(res.data.data)
+        logs.value = res.data.data;
       } else {
         error.value = res.message;
       }
@@ -114,30 +120,89 @@ export const useDashboard = () => {
   };
 
   const fetchNotVote = async () => {
-     try {
-    const res = await $fetch<NotVoteResponse>(`${config.public.apiUrl}/admin/kelas-belum-vote-osis`, {
-      method: "GET",
-      headers: {
-        "authorization": `Bearer ${token}`,
-        "accept": "application/json"
+    try {
+      const res = await $fetch<NotVoteListResponse>(`${config.public.apiUrl}/admin/kelas-belum-vote-osis`, {
+        method: "GET",
+        headers: {
+          "authorization": `Bearer ${token}`,
+          "accept": "application/json"
+        }
+      })
+
+      if (res.success) {
+        notVoteData.value = res.data;
       }
-    })
 
-    if (res.success) {
-      students.value = res.data;
+    } catch (err: any) {
+      errorNotVote.value = "Gagal ambil data siswa per kelas";
+    } finally {
+      loading.value = false
     }
-
-  } catch (err: any) {
-    errorNotVote.value = err.message || "Gagal ambil data Not Vote"
-  } finally {
-    loading.value = false
-  }
   };
 
-  
+  const fetchDaftarKelas = async () => {
+    daftarKelas.value = [
+      "X.RPL-1",
+      "X.RPL-2",
+      "X.TOI-1",
+      "X.TKJ-1",
+      "X.TKJ-2",
+      "X.DKV-1",
+      "X.DKV-2",
+      "X.DKV-3",
+      "X.LPB-1",
+      "X.LPB-2",
+      "XI.RPL-1",
+      "XI.RPL-2",
+      "XI.TKJ-1",
+      "XI.TKJ-2",
+      "XI.TKJ-3",
+      "XI.DKV-1",
+      "XI.DKV-2",
+      "XI.DKV-3",
+      "XI.DKV-4",
+      "XI.LPB-1",
+      "XI.LPB-2",
+      "XII.RPL-1",
+      "XII.RPL-2",
+      "XII.RPL-3",
+      "XII.TKJ-1",
+      "XII.TKJ-2",
+      "XII.MM-1",
+      "XII.MM-2",
+      "XII.MM-3",
+      "XII.MM-4",
+      "XII.PKM-1",
+      "XII.PKM-2",
+    ];
+  };
+
+  const fetchSiswaByKelas = async (kelas: string) => {
+    if (!kelas) return;
+    loading.value = true;
+    try {
+      const res = await $fetch<StudentListResponse>(
+        `${config.public.apiUrl}/admin/kelas/${kelas}/osis-belum-vote`,
+        {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      students.value = res.data;
+      console.log(res);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      loading.value = false;
+    }
+  };
+
+
 
   return {
-    
+
     mpkData,
     osisData,
     totalVotes,
@@ -152,6 +217,11 @@ export const useDashboard = () => {
     votingLogs,
     fetchNotVote,
     notVoteData,
-    students
+    students,
+    selectedKelas,
+    daftarKelas,
+    showNotVoteModal,
+    fetchDaftarKelas,
+    fetchSiswaByKelas
   };
 };
